@@ -3,83 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Playcycle – Landing Page</title>
+  <title>Playcycle – Modular Gaming Controller</title>
+
+  <!-- Retro gaming font (werkt alleen met internet, maar is optioneel) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap">
+
   <style>
+    :root {
+      --bg-dark: #020617;
+      --bg-card: #020817;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.18);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f8f9fa;
-      color: #333;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text-main);
     }
+
     header {
-      background: #4f46e5;
-      color: white;
-      padding: 60px 20px;
       text-align: center;
+      padding: 70px 20px 50px;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 60%);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
     }
+
+    .logo {
+      font-family: "Press Start 2P", system-ui, sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      color: var(--accent);
+      text-shadow: 0 0 12px rgba(34,197,94,0.65);
+    }
+
     h1 {
-      margin-bottom: 10px;
-      font-size: 2.5rem;
+      margin: 0 0 14px;
+      font-size: 2.4rem;
     }
+
     p.subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      opacity: 0.95;
+      font-size: 1.05rem;
+      margin: 0 auto 32px;
+      max-width: 640px;
+      color: var(--text-muted);
     }
+
     .cta-button {
-      padding: 14px 28px;
-      background: white;
-      color: #4f46e5;
-      font-weight: bold;
-      border-radius: 8px;
+      padding: 14px 30px;
+      background: var(--accent);
+      color: #022c22;
+      font-weight: 700;
+      border-radius: 999px;
       text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 0 22px var(--accent-soft), 0 0 4px rgba(15,23,42,0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
     }
+
+    .cta-button:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
     .content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      max-width: 960px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
     }
+
     section {
-      margin-bottom: 30px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(15,23,42,0.96));
+      border-radius: 16px;
+      padding: 24px 22px 26px;
+      margin-bottom: 26px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.65);
     }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    section h2 span.emoji {
+      font-size: 1.3rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 10px 0 0;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
     form {
       display: flex;
       flex-direction: column;
-      margin-top: 20px;
+      margin-top: 18px;
+      gap: 8px;
     }
+
     input, button {
-      padding: 12px;
-      margin: 6px 0;
-      font-size: 1rem;
+      padding: 11px 12px;
+      font-size: 0.98rem;
+      border-radius: 10px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: #020617;
+      color: var(--text-main);
     }
+
+    input::placeholder {
+      color: #6b7280;
+    }
+
     button {
-      background: #4f46e5;
-      color: white;
+      margin-top: 4px;
+      background: var(--accent);
+      color: #022c22;
       border: none;
-      border-radius: 6px;
+      font-weight: 700;
       cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      box-shadow: 0 0 18px var(--accent-soft);
     }
+
     button:hover {
-      opacity: 0.9;
+      filter: brightness(1.07);
+      transform: translateY(-1px);
     }
-    ul {
-      padding-left: 20px;
-    }
+
     .survey-button {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #4f46e5;
-      color: #fff;
-      border-radius: 6px;
+      margin-top: 14px;
+      padding: 10px 22px;
+      border-radius: 999px;
       text-decoration: none;
-      font-weight: bold;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
     }
+
     .survey-button:hover {
-      opacity: 0.9;
+      background: rgba(34,197,94,0.08);
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 6px;
     }
   </style>
 </head>
@@ -88,48 +191,60 @@
 
 <header>
   <!-- Promote your value proposition (logo, slogan, images, …) -->
-  <h1>Playcycle</h1>
+  <div class="logo">Playcycle</div>
+  <h1>Upgrade parts. Not your whole controller.</h1>
   <p class="subtitle">
-    A modular and repairable game controller that lasts longer – upgrade parts, fix issues,
-    and reduce e-waste.
+    Playcycle is a modular, repairable game controller for gamers who are done with stick drift,
+    broken buttons and throwing plastic in the bin. Swap modules, fix issues fast and keep grinding.
   </p>
-  <a href="#signup" class="cta-button">Sign Up for Early Access</a>
+  <a href="#signup" class="cta-button">Join the Early Access Squad</a>
 </header>
 
 <div class="content">
+
   <!-- Clarify how your value proposition relieves pains and increases gains -->
   <section>
-    <h2>Why Playcycle?</h2>
-    <p>We want to make broken controllers a thing of the past. Playcycle focuses on:</p>
+    <h2><span class="emoji">🎮</span> Built for Gamers, Not Landfills</h2>
+    <p>
+      We’re designing Playcycle together with gamers who actually break controllers.
+      Here’s what we want to fix:
+    </p>
     <ul>
-      <li><strongLess frustration:</strong> replace only the broken joystick, trigger or button.</li>
-      <li><strongMore value:</strong> upgrade modules instead of buying a whole new controller.</li>
-      <li><strongLess e-waste:</strong> a controller designed to be repaired, not thrown away.</li>
+      <li><strong>Less rage, more game:</strong> joystick drift or a dead trigger? Swap only that module instead of buying a new controller.</li>
+      <li><strong>Level up, don’t start over:</strong> upgrade sticks, grips or buttons as your playstyle changes.</li>
+      <li><strong>Less e-waste:</strong> keep one controller for years and just replace the parts that wear out.</li>
     </ul>
   </section>
 
   <!-- Call-to-action email signup below value proposition -->
   <section id="signup">
-    <h2>Stay in the Loop</h2>
-    <p>Sign up to get updates, early access and the chance to test Playcycle in the future.</p>
+    <h2><span class="emoji">⚡</span> Get on the Waitlist</h2>
+    <p>
+      Want to be the first to test Playcycle, give feedback and maybe break a few prototypes for us?
+      Drop your email and we’ll keep you in the loop.
+    </p>
 
     <form name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
+      <input type="text" name="name" placeholder="Gamer tag or name" required />
+      <input type="email" name="email" placeholder="Email address" required />
       <button type="submit">Join the Waitlist</button>
+      <div class="small">No spam, only important updates and test invites.</div>
     </form>
   </section>
 
   <!-- Link to an online survey questioning future customers’ interest -->
   <section>
-    <h2>Tell Us What You Think</h2>
+    <h2><span class="emoji">🧠</span> Help Us Design the Perfect Controller</h2>
     <p>
-      We are testing our idea and would love your feedback.
-      Answer a few short questions about your experience with controllers and what you expect from Playcycle.
+      We’re still testing our ideas. Tell us how you break controllers, what annoys you most
+      and what your dream gamepad looks like. Your answers help us decide what to build first.
     </p>
-    <!-- replace # with your real survey URL (Google Forms, Typeform, …) -->
-    <a href="#" target="_blank" class="survey-button">Fill in the Online Survey</a>
+
+    <!-- Vervang # door jullie echte Google Forms / Typeform link -->
+    <a href="#" target="_blank" class="survey-button">Fill in the Player Survey</a>
+    <div class="small">Takes about 3 minutes. Your feedback = direct impact on Playcycle.</div>
   </section>
+
 </div>
 
 </body>
