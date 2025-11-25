@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Product – Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #4f46e5;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+    .cta-button {
+      padding: 14px 28px;
+      background: white;
+      color: #4f46e5;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+    input, button {
+      padding: 12px;
+      margin: 6px 0;
+      font-size: 1rem;
+    }
+    button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Your Product Name</h1>
+  <p class="subtitle">A short description of your business idea goes here — what you do and why it matters.</p>
+  <a href="#signup" class="cta-button">Sign Up for Early Access</a>
+</header>
+
+<div class="content">
+  <h2>Stay in the Loop</h2>
+  <p>Sign up below to get updates, early access, or special offers.</p>
+
+  <form id="signup" name="contact" method="POST" data-netlify="true">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="email" placeholder="Your email" required />
+    <button type="submit">Join the Waitlist</button>
+  </form>
+</div>
+
+</body>
+</html>
