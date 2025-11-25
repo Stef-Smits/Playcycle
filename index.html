@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Playcycle – Modular Sustainable Game Controller</title>
+  <title>Playcycle – Landing Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -35,12 +35,15 @@
       text-decoration: none;
     }
     .content {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 30px;
     }
     form {
       display: flex;
@@ -62,26 +65,71 @@
     button:hover {
       opacity: 0.9;
     }
+    ul {
+      padding-left: 20px;
+    }
+    .survey-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #4f46e5;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .survey-button:hover {
+      opacity: 0.9;
+    }
   </style>
 </head>
 
 <body>
 
 <header>
+  <!-- Promote your value proposition (logo, slogan, images, …) -->
   <h1>Playcycle</h1>
-  <p class="subtitle">The modular and repairable game controller that lasts longer — upgrade, replace, and reduce e-waste.</p>
+  <p class="subtitle">
+    A modular and repairable game controller that lasts longer – upgrade parts, fix issues,
+    and reduce e-waste.
+  </p>
   <a href="#signup" class="cta-button">Sign Up for Early Access</a>
 </header>
 
 <div class="content">
-  <h2>Stay Updated</h2>
-  <p>Join the waitlist to get early access, updates, and future tester opportunities.</p>
+  <!-- Clarify how your value proposition relieves pains and increases gains -->
+  <section>
+    <h2>Why Playcycle?</h2>
+    <p>We want to make broken controllers a thing of the past. Playcycle focuses on:</p>
+    <ul>
+      <li><strongLess frustration:</strong> replace only the broken joystick, trigger or button.</li>
+      <li><strongMore value:</strong> upgrade modules instead of buying a whole new controller.</li>
+      <li><strongLess e-waste:</strong> a controller designed to be repaired, not thrown away.</li>
+    </ul>
+  </section>
 
-  <form id="signup" name="contact" method="POST" data-netlify="true">
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="email" placeholder="Your email" required />
-    <button type="submit">Join the Waitlist</button>
-  </form>
+  <!-- Call-to-action email signup below value proposition -->
+  <section id="signup">
+    <h2>Stay in the Loop</h2>
+    <p>Sign up to get updates, early access and the chance to test Playcycle in the future.</p>
+
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <button type="submit">Join the Waitlist</button>
+    </form>
+  </section>
+
+  <!-- Link to an online survey questioning future customers’ interest -->
+  <section>
+    <h2>Tell Us What You Think</h2>
+    <p>
+      We are testing our idea and would love your feedback.
+      Answer a few short questions about your experience with controllers and what you expect from Playcycle.
+    </p>
+    <!-- replace # with your real survey URL (Google Forms, Typeform, …) -->
+    <a href="#" target="_blank" class="survey-button">Fill in the Online Survey</a>
+  </section>
 </div>
 
 </body>
