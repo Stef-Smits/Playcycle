@@ -2,171 +2,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Playcycle Core Controller – Playcycle</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Playcycle Core Controller – Playcycle</title>
 
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="webshop.css" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="playcycle.css" />
 </head>
-<body class="bg-dark text-light">
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-navbar shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-accent" href="shop.html">
-      PLAYCYCLE
-    </a>
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-        <!-- 🛒 CART BUTTON -->
-        <li class="nav-item">
-          <a class="nav-link position-relative" href="cart.html">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="cart-count" class="cart-badge">0</span>
-          </a>
-        </li>
-
-      </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-navbar shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-accent" href="index.html">PLAYCYCLE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="shop.html">Webshop</a></li>
+                <li class="nav-item"><a class="nav-link" href="production.html">Production</a></li>
+                <li class="nav-item">
+                    <a class="nav-link position-relative" href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
-  <main class="py-5">
+<main class="py-5 flex-fill">
     <div class="container">
-      <div class="row g-4 align-items-start product-detail-row">
-        <!-- “Afbeelding” kant -->
-        <div class="col-md-6">
-          <div class="bg-black rounded-4 border border-secondary-subtle p-4 mb-3 text-center product-detail-media">
-            <div class="ratio ratio-16x9 bg-dark rounded-3 border border-secondary d-flex align-items-center justify-content-center">
-              <img 
-                src="images/controller.png" 
-                alt="Playcycle Core Controller" 
-                class="img-fluid"
-              />
-            </div>
-          </div>
+        <div class="row g-4 align-items-start product-detail-row">
 
-          <p class="small text-muted mb-0">
-            The Playcycle Core Controller is designed to be opened, upgraded and repaired by you.
-          </p>
+            <div class="col-md-6">
+                <div class="product-detail-media ratio ratio-16x9 bg-dark rounded-3 border border-secondary d-flex align-items-center justify-content-center overflow-hidden">
+                    <img src="images/controller.png" alt="Playcycle Core Controller" class="img-fluid"/>
+                </div>
+                <p class="small text-muted mt-2">
+                    The Playcycle Core Controller is designed to be opened, upgraded and repaired by you.
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <h1 class="h3">Playcycle Core Controller</h1>
+                <p class="text-accent fw-bold fs-4">€89</p>
+                <p class="text-muted small">
+                    A modular and durable game controller with swappable joysticks, buttons and triggers.
+                    When something breaks, you replace only that part instead of buying a whole new controller.
+                </p>
+
+                <hr class="border-secondary"/>
+
+                <form class="mt-3">
+                    <h2 class="h6 mb-2">Choose your color</h2>
+                    <p class="small text-muted mb-2">You can swap shells later, but this will be your first setup.</p>
+
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="color" id="colorBlack" value="Midnight Black" checked/>
+                            <label class="form-check-label" for="colorBlack">Midnight Black – classic matte finish</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="color" id="colorWhite" value="Glacier White"/>
+                            <label class="form-check-label" for="colorWhite">Glacier White – clean, bright look</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="color" id="colorGreen" value="Neon Green"/>
+                            <label class="form-check-label" for="colorGreen">Neon Green – bold, arcade-inspired design</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="color" id="colorPurple" value="Electric Purple"/>
+                            <label class="form-check-label" for="colorPurple">Electric Purple – retro translucent style</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-end mb-3">
+                        <div class="col-4">
+                            <label class="form-label small">Quantity</label>
+                            <input type="number" min="1" value="1" class="form-control form-control-sm"/>
+                        </div>
+                        <div class="col-8 text-end">
+                            <button type="button" class="btn btn-accent">Add to cart</button>
+                        </div>
+                    </div>
+                </form>
+
+                <hr class="border-secondary"/>
+
+                <h2 class="h6">What’s included</h2>
+                <ul class="small text-muted ps-3">
+                    <li>1× Playcycle Core Controller (chosen color)</li>
+                    <li>Standard joysticks, buttons and trigger set pre-installed</li>
+                    <li>Quick-start guide for opening and swapping parts</li>
+                </ul>
+
+                <h2 class="h6 mt-3">Designed for easy repairs</h2>
+                <ul class="small text-muted ps-3">
+                    <li>Open the controller with a simple latch system</li>
+                    <li>Drop-in modules for joysticks, buttons and triggers</li>
+                    <li>No soldering, no special tools</li>
+                </ul>
+            </div>
+
         </div>
-
-        <!-- Info kant -->
-        <div class="col-md-6">
-          <h1 class="h3 mb-1">Playcycle Core Controller</h1>
-          <p class="text-accent fw-bold fs-4 mb-2">€89</p>
-          <p class="text-muted small">
-            A modular and durable game controller with swappable joysticks, buttons and triggers.
-            When something breaks, you replace only that part instead of buying a whole new controller.
-          </p>
-
-          <hr class="border-secondary" />
-
-          <!-- Kleur keuze -->
-          <form class="mt-3">
-            <h2 class="h5 mb-2">Choose your color</h2>
-            <p class="small text-muted mb-2">
-              You can swap shells later, but this will be your first setup.
-            </p>
-
-            <div class="mb-3">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="color" id="colorBlack" value="Midnight Black" checked />
-                <label class="form-check-label" for="colorBlack">
-                  Midnight Black – classic matte finish
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="color" id="colorWhite" value="Glacier White" />
-                <label class="form-check-label" for="colorWhite">
-                  Glacier White – clean, bright look
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="color" id="colorGreen" value="Neon Green" />
-                <label class="form-check-label" for="colorGreen">
-                  Neon Green – bold, arcade-inspired design
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="color" id="colorPurple" value="Electric Purple" />
-                <label class="form-check-label" for="colorPurple">
-                  Electric Purple – retro translucent style
-                </label>
-              </div>
-            </div>
-
-            <!-- Aantal en CTA -->
-            <div class="row g-3 align-items-end mb-3">
-              <div class="col-4">
-                <label for="quantityController" class="form-label small">Quantity</label>
-                <input
-                  type="number"
-                  min="1"
-                  value="1"
-                  class="form-control form-control-sm"
-                  id="quantityController"
-                />
-              </div>
-              <div class="col-8 text-end">
-                <button type="button" class="btn btn-accent">
-                  Add to cart
-                </button>
-              </div>
-            </div>
-          </form>
-
-          <hr class="border-secondary" />
-
-          <h2 class="h6">What’s included</h2>
-          <ul class="small text-muted ps-3">
-            <li>1× Playcycle Core Controller (chosen color)</li>
-            <li>Standard joysticks, buttons and trigger set pre-installed</li>
-            <li>Quick-start guide for opening and swapping parts</li>
-          </ul>
-
-          <h2 class="h6 mt-3">Designed for easy repairs</h2>
-          <ul class="small text-muted ps-3">
-            <li>Open the controller with a simple latch system</li>
-            <li>Drop-in modules for joysticks, buttons and triggers</li>
-            <li>No soldering, no special tools</li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </main>
+</main>
 
-  <footer class="py-4 border-top border-secondary small text-center text-muted">
-    © 2025 Playcycle – This is a fictional prototype webshop for a school project.
-    No real purchases, payments, shipments, or services are processed.
-  </footer>
+<footer>
+    <div class="container text-center my-4">
+        <p class="mb-1">© 2025 Playcycle — Modular Gaming Hardware</p>
+        <p class="mb-0">This is a fictional prototype created for an educational project. No real purchases or services are processed.</p>
+    </div>
+</footer>
 
-  <!-- Bootstrap JS bundle -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<!-- Made by Jef Coppens -->

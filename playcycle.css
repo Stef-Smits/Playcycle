@@ -1,0 +1,205 @@
+/* Made by Jef Coppens & Stef Smits */
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap");
+
+/* GLOBAL VARIABLES */
+:root {
+    --line-color: rgba(148, 163, 184, 0.6);
+}
+
+/* GLOBAL STYLES */
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+    color: #f9fafb;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+main {
+    flex: 1;
+}
+
+/* TEXT COLORS */
+.text-accent {
+    color: #22c55e !important;
+}
+.text-muted {
+    color: #d1d5db !important;
+}
+
+/* BACKGROUND COLORS */
+.bg-navbar {
+    background-color: #020617 !important;
+}
+.bg-accent-soft {
+    background-color: rgba(34, 197, 94, 0.12) !important;
+}
+.border-accent {
+    border-color: #22c55e !important;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    border-bottom: 1px solid var(--line-color);
+    background-color: #020617;
+    padding-block: 15px;
+}
+@media (min-width: 992px) {
+    .navbar .container {
+        display: flex;
+        align-items: center;
+    }
+}
+.navbar-collapse.show {
+    height: auto;
+}
+.navbar-brand {
+    font-family: "Press Start 2P", system-ui, sans-serif;
+    letter-spacing: 0.08em;
+    font-size: 1rem;
+}
+.nav-link {
+    transition: 0.5s ease-out;
+}
+
+/* BUTTONS */
+.btn-accent {
+    background-color: #22c55e;
+    color: #022c22;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: none;
+    transition: 0.5s ease-out;
+}
+.btn-accent:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 0 1px #22c55e;
+    color: #22c55e;
+}
+.btn-outline-accent {
+    border-radius: 999px;
+    border-color: #22c55e;
+    color: #22c55e;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background-color: transparent;
+    transition: 0.5s ease-in;
+}
+.btn-outline-accent:hover {
+    background-color: #22c55e;
+}
+
+/* HERO */
+.hero-gradient {
+    background: radial-gradient(circle at top left, #16a34a33 0, #020617 55%);
+    border-bottom: 1px solid var(--line-color);
+}
+
+/* HEADERS */
+h1, h2, h3, h4, h5, h6 {
+    color: #f9fafb;
+}
+
+/* CARDS */
+.card {
+    background: #111827 !important;
+    border-radius: 16px !important;
+    border: 1px solid var(--line-color) !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.75) !important;
+    padding: 1.5rem;
+}
+.card .card-title {
+    font-weight: 600;
+    color: #f9fafb !important;
+}
+.card .card-text {
+    line-height: 1.5;
+    color: #e5e7eb !important;
+}
+
+/* PRODUCT THUMB */
+.product-thumb {
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: #020617;
+    padding: 8px;
+    border: 1px solid var(--line-color);
+}
+
+/* SMALL TEXT */
+.lead {
+    color: #e5e7eb;
+}
+small, .small {
+    color: #d1d5db !important;
+}
+
+/* PRODUCT DETAIL */
+.product-detail-media .ratio {
+    max-height: 380px;
+}
+.product-detail-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+@media (min-width: 768px) {
+    .product-detail-row {
+        align-items: flex-start;
+    }
+}
+
+/* CART BADGE */
+.navbar-nav .nav-item .nav-link.position-relative {
+    position: relative;
+}
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #22c55e;
+    color: #022c22;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: 1px solid #0a0a0a;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    border-top: 1px solid var(--line-color);
+    color: #d1d5db;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 20px 0;
+}
+footer p {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+footer a {
+    color: #22c55e;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #86efac;
+}

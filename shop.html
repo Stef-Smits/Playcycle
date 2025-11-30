@@ -1,0 +1,226 @@
+<!-- Made by Jef Coppens -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Playcycle – Webshop</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="playcycle.css" />
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-navbar shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-accent" href="index.html">PLAYCYCLE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="shop.html">Webshop</a></li>
+                <li class="nav-item"><a class="nav-link" href="production.html">Production</a></li>
+                <li class="nav-item">
+                    <a class="nav-link position-relative" href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="py-5 hero-gradient border-bottom border-secondary">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-7">
+                <p class="text-uppercase small text-accent mb-1">Modular gaming gear</p>
+                <h1 class="display-5 fw-bold">
+                    Replace parts,<br class="d-none d-md-inline"/> not your whole controller.
+                </h1>
+                <p class="lead mt-3">
+                    Playcycle lets you swap joysticks, buttons and triggers yourself.
+                    When something breaks, you order the part you need and keep playing.
+                </p>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+                <!-- Optional large controller image here -->
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="py-5 flex-fill">
+    <div class="container">
+
+        <!-- Controllers -->
+        <section id="controllers" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h3 mb-0">Playcycle Controller</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark border border-secondary">
+                        <img src="images/controller.png" alt="Playcycle Core Controller" class="product-thumb"/>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-accent-soft text-accent mb-2">Most popular</span>
+                            <h5 class="card-title">Playcycle Core Controller</h5>
+                            <p class="card-text small text-muted">
+                                A durable modular controller with swappable joysticks, buttons and triggers.
+                                Designed to be opened and repaired by you.
+                            </p>
+                            <ul class="small ps-3 mb-3 text-muted">
+                                <li>Easy to open – no special tools</li>
+                                <li>Works with PC and most consoles*</li>
+                                <li>Color & shell options selectable after choosing this controller</li>
+                            </ul>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-accent fs-5">€89</span>
+                                <a href="controller.html" class="btn btn-outline-accent btn-sm">Select controller</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Replacement Parts & Modules -->
+        <section id="parts" class="mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h3 mb-0">Replacement Parts & Modules</h2>
+                <span class="text-muted small">Easily replace parts when something breaks.</span>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Joystick Module (pair) -->
+                <div class="col">
+                    <div class="card h-100 bg-dark border border-secondary">
+                        <img src="images/joystickpair.png" alt="Joystick Module pair" class="product-thumb"/>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Joystick Module (pair)</h5>
+                            <p class="card-text small text-muted">
+                                Replacement sticks designed to reduce drift. Perfect if both sticks
+                                are worn out or drifting.
+                            </p>
+                            <ul class="small ps-3 mb-3 text-muted">
+                                <li>Includes left & right joystick</li>
+                                <li>Tool-free installation</li>
+                            </ul>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-accent">€14</span>
+                                <a href="joystick-pair.html" class="btn btn-outline-accent btn-sm">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Joystick Module -->
+                <div class="col">
+                    <div class="card h-100 bg-dark border border-secondary">
+                        <img src="images/joystick.png" alt="Single joystick module" class="product-thumb"/>
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-accent-soft text-accent mb-2">Most popular</span>
+                            <h5 class="card-title">Single Joystick Module</h5>
+                            <p class="card-text small text-muted">
+                                Only one stick drifting? Order a single replacement joystick module.
+                            </p>
+                            <ul class="small ps-3 mb-3 text-muted">
+                                <li>Choose left or right in the next step</li>
+                                <li>Fits all Playcycle controllers</li>
+                            </ul>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-accent">€8</span>
+                                <a href="joystick-single.html" class="btn btn-outline-accent btn-sm">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="col">
+                    <div class="card h-100 bg-dark border border-secondary">
+                        <img src="images/buttons.png" alt="Button set" class="product-thumb"/>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Buttons</h5>
+                            <p class="card-text small text-muted">
+                                Full set of triangle, circle, square and X buttons. Ideal when several buttons feel
+                                mushy or sticky.
+                            </p>
+                            <ul class="small ps-3 mb-3 text-muted">
+                                <li>Includes triangle, circle, square and X buttons</li>
+                            </ul>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-accent">€11</span>
+                                <a href="button-pack.html" class="btn btn-outline-accent btn-sm">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trigger Set -->
+                <div class="col">
+                    <div class="card h-100 bg-dark border border-secondary">
+                        <img src="images/trigger_set.png" alt="Trigger & bumper set" class="product-thumb"/>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Trigger Set</h5>
+                            <p class="card-text small text-muted">Replace broken triggers.</p>
+                            <ul class="small ps-3 mb-3 text-muted">
+                                <li>Includes L1/R1</li>
+                            </ul>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-accent">€14</span>
+                                <a href="trigger-set.html" class="btn btn-outline-accent btn-sm">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Trigger -->
+                <div class="col">
+                    <div class="card h-100 bg-dark border border-secondary">
+                        <img src="images/trigger.png" alt="Single trigger" class="product-thumb"/>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Single Trigger</h5>
+                            <p class="card-text small text-muted">
+                                Only one trigger snapped or lost tension? Swap it out with a single replacement.
+                            </p>
+                            <ul class="small ps-3 mb-3 text-muted">
+                                <li>Select L1, L2, R1 or R2 in the next step</li>
+                                <li>Drop-in replacement, no tools needed</li>
+                            </ul>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-accent">€8</span>
+                                <a href="trigger-single.html" class="btn btn-outline-accent btn-sm">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container text-center my-4">
+        <p class="mb-1">© 2025 Playcycle — Modular Gaming Hardware</p>
+        <p class="mb-0">This is a fictional prototype created for an educational project. No real purchases or services are processed.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
